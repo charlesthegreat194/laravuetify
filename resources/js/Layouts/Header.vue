@@ -30,7 +30,6 @@
 
   
     
-    <div v-f="">SignOut</div>
     <div  class=" space-x-10">
 
         <Link href="/signup">Sign Up</Link>
