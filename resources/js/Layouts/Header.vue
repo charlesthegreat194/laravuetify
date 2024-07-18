@@ -6,7 +6,8 @@
 </script>
 
 <template>
-
+     
+     
     <nav class=" font-popins bg-semiblack-0 flex-wrap text-white flex justify-between h-20  place-items-center px-20 gap-10">
     <div class="  flex-col text-center">
 
@@ -25,11 +26,9 @@
     </ul>
     </div>
 
-    <!-- <div v-if="$page.props.auth.user">
-        <Link href="/signup">Sign Out</Link>
-    </div> -->
-
     
+
+  
 
     <div  class=" space-x-10">
 
