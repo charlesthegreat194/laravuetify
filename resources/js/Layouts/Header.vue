@@ -1,6 +1,6 @@
 <script setup>
   import {Link} from '@inertiajs/vue3';
-  import { useForm } from '@inertiajs/vue3';
+
   
 
 </script>
@@ -29,7 +29,8 @@
     
 
   
-
+    
+    <div v-f="">SignOut</div>
     <div  class=" space-x-10">
 
         <Link href="/signup">Sign Up</Link>
