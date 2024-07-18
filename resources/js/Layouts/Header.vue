@@ -1,5 +1,7 @@
 <script setup>
   import {Link} from '@inertiajs/vue3';
+  import { useForm } from '@inertiajs/vue3';
+  
 
 </script>
 
@@ -23,7 +25,14 @@
     </ul>
     </div>
 
-    <div class=" space-x-10">
+    <!-- <div v-if="$page.props.auth.user">
+        <Link href="/signup">Sign Out</Link>
+    </div> -->
+
+    
+
+    <div  class=" space-x-10">
+
         <Link href="/signup">Sign Up</Link>
         <Link href="/login" class=" text-red-500 text-lg border-2 border-red-500 shadow-sm p-3 rounded-md
        hover:bg-red-500 hover:text-white duration-500 ease-in-out">Sign In</Link>
