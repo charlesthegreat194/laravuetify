@@ -18,7 +18,7 @@
     </div>
     <div class="">
     <ul class="flex  list-none text-center place-items-center  gap-10">
-      <Link href="/" class=" link1  text-lg active: text-red-500">Home</Link>
+      <Link href="/" class=" link1  text-lg ">Home</Link>
       <Link href="/contact" class="link2 text-lg  ">Contact</Link>
 
     </ul>

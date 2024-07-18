@@ -24,7 +24,7 @@ class AuthController extends Controller
         // login
             Auth::login($user);
         // redirect
-            return redirect()->route('index');
+            return redirect()->route('login');
 
 
 
@@ -40,6 +40,8 @@ class AuthController extends Controller
         if (Auth::attempt($fields)) {
             $request->session()->regenerate();
 
+         
+
             return redirect()->intended('/dashboard');
         }
 
@@ -48,4 +50,6 @@ class AuthController extends Controller
             'password' => 'Incorrect Password',
         ])->onlyInput('email');
     }
+
+    
 }

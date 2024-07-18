@@ -28,10 +28,11 @@ Route::get('/contact', function(){
 
 Route::get('/login', function(){
     return Inertia::render('login');
-});
+})->name('login');
+
 Route::get('/signup', function(){
     return Inertia::render('signup');
-});
+})->name('signup');
 
 Route::get('/dashboard', function(){
     return Inertia::render('dashboard');

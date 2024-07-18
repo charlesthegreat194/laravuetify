@@ -7,6 +7,11 @@
     
     <DashboardHeader></DashboardHeader>
 
-    <h1>Welcome to your dashboard</h1>
+    <h1 class=" text-white">Welcome to your dashboard</h1>
+
+    <div class=" text-green-500 bg-yellow-500 px-32">
+
+
+    </div>
 
 </template>

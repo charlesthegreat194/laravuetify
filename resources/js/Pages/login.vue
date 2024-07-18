@@ -19,7 +19,7 @@
 <template>
     <Header></Header>
 
-    <div class=" bg-yellow-500 flex justify-center">
+    <div class=" bg-yellow-500 flex flex-col justify-center">
         <form @submit.prevent="submit">
             <h1 class=" text-blue-500 tex">Log in Bai</h1>
             <div>
@@ -37,6 +37,16 @@
                 <button>Login</button>
             </div>
         </form>
+
+
+        <v-container grid-list-md vm>
+            <v-card color="primary">
+                <v-form >
+                    <h1>h1</h1>
+                </v-form>
+
+            </v-card>
+        </v-container>
     </div>
 
 </template>

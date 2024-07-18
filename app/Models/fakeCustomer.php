@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class laravuetify extends Model
 {
     use HasFactory;
-}
+    
+    protected $fillable = [
+        'name',
+        'address',
+        'email',
+        'phone number',
+    ];
+};
