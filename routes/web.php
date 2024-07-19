@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\UserController;
+use App\Models\User;
 
 
 
@@ -43,4 +45,14 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::post('/login', [AuthController::class, 'login']);
 
+
+
+// Route::inertia('/dashboard', 'dashboard', ['users' => User::all()])->name('dashboard');
+
+Route::middleware(['auth'])->group(function(){
+    Route::get('/dashboard', function(){
+        $users = User::paginate(); // Fetch all users from the database
+        return Inertia::render('dashboard', ['users' => $users]);
+    })->name('dashboard');
+});
 

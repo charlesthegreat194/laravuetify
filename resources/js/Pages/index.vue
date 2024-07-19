@@ -3,17 +3,17 @@
  import Main from '../Layouts/Main.vue';
  import Footer from '../Layouts/Footer.vue';
 
- 
+
 </script>
 <template>
-    
-       
+
+
         <!-- header -->
         <Header></Header>
-   
+
         <!-- main -->
         <Main></Main>
-   
+
         <!-- footer -->
         <Footer></Footer>
 

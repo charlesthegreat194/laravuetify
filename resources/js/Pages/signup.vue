@@ -19,36 +19,71 @@
 <template>
 
     <Header></Header>
-    <div class=" bg-yellow-600 h-screen">
+
+    <div class=" space-x-20 flex flex-row px-20  items-center justify-center mt-20">
+        <div class= " font-anton">
+            <!-- for slogan -->
+            <h1 class=" text-white text-6xl">Register <span class=" text-red-500 text-6xl">Now!</span></h1>
+        </div>
+
+        <div class="">
+
     <form @submit.prevent="submit">
-        <div class=" ">
-            <label  for="name">Name</label>
-            <input type="text"  v-model="form.name">
-            <small>{{ form.errors.name }}</small>
 
-        </div>
-        <div>
-            <label  for="name">Email</label>
-            <input type="email" v-model="form.email">
-            <small>{{ form.errors.email }}</small>
-        </div>
-        <div>
-            <label  for="name">Password</label>
-            <input type="password" v-model="form.password">
-            <small>{{ form.errors.password }}</small>
-        </div>
-        <div>
-            <label  for="name">Confirm Password</label>
-            <input type="password" v-model="form.password_confirmation">
-            <small>{{ form.errors.password_confirmation }}</small>
-        </div>
-        <div>
-            <button>register</button>
-        </div>
+        <v-card class="bg-light-blue-50" style="width: 500px; background-color: white;">
+    <v-card-title primary-title class="text-center" style="color: red; font-size: 32px;">
+      Sign Up
+    </v-card-title>
+
+    <v-text-field
+      v-model="form.name"
+      label="Name"
+      required
+      :error-messages="form.errors.name"
+      @input="$v.form.name.$touch()"
+      class="my-2"
+      outlined
+    ></v-text-field>
+    <v-text-field
+      v-model="form.email"
+      label="Email"
+      type="email"
+      required
+      :error-messages="form.errors.email"
+      @input="$v.form.email.$touch()"
+      class="my-2"
+      outlined
+    ></v-text-field>
+    <v-text-field
+      v-model="form.password"
+      label="Password"
+      type="password"
+      required
+      :error-messages="form.errors.password"
+      @input="$v.form.password.$touch()"
+      class="my-2"
+      outlined
+    ></v-text-field>
+    <v-text-field
+      v-model="form.password_confirmation"
+      label="Confirm Password"
+      type="password"
+      required
+      :error-messages="form.errors.password_confirmation"
+      @input="$v.form.password_confirmation.$touch()"
+      class="my-2"
+      outlined
+    ></v-text-field>
+      <v-divider>
+    <v-btn type="submit" class="mt-4 bg-red-500" style=" color: white; background-color: #f56565">Register</v-btn>
+    </v-divider>
+  </v-card>
     </form>
-
 
 </div>
 
+</div>
 
 </template>
+
+

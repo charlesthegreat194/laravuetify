@@ -17,13 +17,41 @@
 </script>
 
 <template>
+
     <Header></Header>
 
-    <div class=" bg-yellow-500 flex flex-col justify-center">
+    <div class="  flex flex-col justify-center items-center px-20 mt-20">
         <form @submit.prevent="submit">
-            <h1 class=" text-blue-500 tex">Log in Bai</h1>
-            <div>
-                <label for="email">Email</label>
+
+            <div class="">
+
+                <v-card class=" " style=" width: 500px;">
+                    <v-card-title primary-title class="text-center text-red-500 " style=" ">
+                        Sign In
+                    </v-card-title>
+                   <v-text-field
+                    v-model="form.email"
+
+                    label="Email"
+                    type="email"
+                    required
+
+
+                   >
+                </v-text-field>
+                <v-text-field
+                    v-model="form.password"
+                    label="Password"
+                    type="password"
+
+                ></v-text-field>
+                <v-divider class="">
+                    <v-btn style=" color: white; background-color: #f56565" type="submit">Log In</v-btn>
+                </v-divider>
+                
+
+                </v-card>
+                <!-- <label for="email">Email</label>
                 <input type="email"  v-model="form.email">
                 <small>{{ form.errors.email }}</small>
 
@@ -34,19 +62,12 @@
                 <small>{{ form.errors.password }}</small>
             </div>
             <div>
-                <button>Login</button>
+                <button>Login</button> -->
             </div>
         </form>
 
 
-        <v-container grid-list-md vm>
-            <v-card color="primary">
-                <v-form >
-                    <h1>h1</h1>
-                </v-form>
 
-            </v-card>
-        </v-container>
     </div>
 
 </template>
